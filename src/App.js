@@ -1,6 +1,6 @@
 import React from 'react';
-import './App.css';
 import { SubstringTagger } from './components/Substring/SubstringTagger';
+import styles from './App.module.css';
 
 function App() {
   const Content = `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci ut sequi illum at autem reiciendis, tempora pariatur, quos dolores explicabo quisquam ad in, temporibus nulla sint! Soluta natus accusantium nemo?
@@ -63,7 +63,7 @@ function App() {
     ]
   };
   return (
-    <div className='App'>
+    <div className={styles.app}>
       <div>
         <SubstringTagger data={data} />
       </div>

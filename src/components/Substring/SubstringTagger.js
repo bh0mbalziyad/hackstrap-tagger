@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Tag } from '../Tag/Tag';
-import './SubstringTagger.css';
 import processString from 'react-process-string';
+import styles from './SubstringTagger.module.css';
 
 export const SubstringTagger = ({ data }) => {
   // extract data from prop value
@@ -44,7 +44,7 @@ export const SubstringTagger = ({ data }) => {
   }
 
   // if result is returned then return result otherwise render plain text
-  return <div>{result ? result : text}</div>;
+  return <div className={styles.substring}>{result ? result : text}</div>;
 };
 
 // Prop type declaration
