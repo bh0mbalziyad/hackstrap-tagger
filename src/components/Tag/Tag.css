@@ -1,0 +1,18 @@
+.main {
+  font-size: 15px;
+  border-radius: 20px;
+  padding: 3px;
+  margin: 3px;
+  display: inline-flexbox;
+  flex-direction: row;
+}
+
+.string {
+  letter-spacing: 2px;
+}
+
+.tag {
+  text-transform: capitalize;
+  font-weight: 700;
+  color: black;
+}
