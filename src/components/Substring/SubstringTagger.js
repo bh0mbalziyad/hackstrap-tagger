@@ -13,7 +13,7 @@ export const SubstringTagger = ({ data }) => {
   nerTags.forEach(
     value =>
       (objectMap[value.subString.toLowerCase()] = (
-        <Tag backgroundColor='green' string={value.subString} tag={value.tag} />
+        <Tag string={value.subString} tag={value.tag} />
       ))
   );
 
@@ -25,7 +25,11 @@ export const SubstringTagger = ({ data }) => {
     {
       regex: re,
       fn: (key, result) => {
-        return <Fragment>{objectMap[result[0].toLowerCase()]}</Fragment>;
+        return (
+          <Fragment key={key + result[0]}>
+            {objectMap[result[0].toLowerCase()]}
+          </Fragment>
+        );
       }
     }
   ];
